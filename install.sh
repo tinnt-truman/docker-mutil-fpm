@@ -45,7 +45,7 @@ EOF
 
 # Build và chạy containers
 echo -e "${YELLOW}⚙️ Đang khởi tạo các containers...${NC}"
-docker-compose up -d --build
+docker compose up -d --build
 
 # Đợi MySQL khởi động
 echo -e "${YELLOW}⚙️ Đang đợi MySQL khởi động hoàn tất...${NC}"
@@ -94,8 +94,8 @@ echo -e "${YELLOW}⚙️ Đang cài đặt JWT Authentication...${NC}"
 docker exec inan_service_php_fpm composer require tymon/jwt-auth
 
 # Tạo key cho ứng dụng Laravel
-echo -e "${YELLOW}⚙️ Đang tạo key cho ứng dụng Laravel...${NC}"
-docker exec inan_service_php_fpm php artisan key:generate
+#echo -e "${YELLOW}⚙️ Đang tạo key cho ứng dụng Laravel...${NC}"
+#docker exec inan_service_php_fpm php artisan key:generate
 
 # Tạo secret key cho JWT
 echo -e "${YELLOW}⚙️ Đang tạo secret key cho JWT...${NC}"
